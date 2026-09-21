@@ -1,7 +1,24 @@
 # OAra Labs Homebrew tap
 
-`brew tap oaralabs/tap` works today, but this tap does not serve a formula yet, so `brew install oaralabs/tap/oara` will fail until one lands.
+```bash
+brew tap oaralabs/tap
+brew install oaralabs/tap/oara
+```
 
-Homebrew now enforces tap trust: after tapping, run `brew trust oaralabs/tap` once, or installs from this tap are ignored as untrusted (observed on macOS, 2026-09-01).
+Install the **fully qualified** name. Tapping does not grant whole-tap trust — a
+bare `brew install oara` is ignored as untrusted. To use the short name, run
+`brew trust --formula oaralabs/tap/oara` first.
 
-The formula lands when [Prometheus](https://github.com/OAraLabs/Prometheus) has a published release. Written before that, it would have to point at an invented tarball URL and sha256, so none is written.
+`brew tap oaralabs/tap` resolves to this repository, `OAraLabs/homebrew-tap`:
+the repo keeps the `homebrew-` prefix and the tap command never has it.
+
+## Formula
+
+| formula | serves | upstream |
+|---|---|---|
+| `oara` | the `oara` command from [Prometheus](https://github.com/OAraLabs/Prometheus) | the published PyPI sdist `oara-prometheus` |
+
+The formula pins the PyPI source distribution rather than a GitHub source
+tarball — that is the artifact that was actually published and verified.
+Resource blocks are generated with `brew update-python-resources`; do not edit
+them by hand.
