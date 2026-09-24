@@ -3,17 +3,15 @@ class Oara < Formula
 
   desc "Sovereign agent harness for local LLMs"
   homepage "https://github.com/OAraLabs/Prometheus"
-  url "https://files.pythonhosted.org/packages/0c/53/df547a0f4399310d24f7c186121a79db3d85837350dc30cda3cdec613f1f/oara_prometheus-0.9.0.tar.gz"
-  sha256 "49c566215fcc8d9b278a0bbbacd0c725c05c5f91390cdafdc721ffb463d1bcd7"
+  url "https://files.pythonhosted.org/packages/df/87/35553a235c71480b4713d70d03461e28eab9019cae67ca2a7fbe55aca1a7/oara_prometheus-0.9.3.tar.gz"
+  sha256 "b1e916958fbb74be7e361237167d6f1119ab27c0d22a089fa8531a565e6c1519"
   license "MIT"
 
   depends_on "cryptography"
   depends_on "libyaml"
-  depends_on "onnxruntime"
   depends_on "pydantic"
   depends_on "pymupdf"
   depends_on "python@3.14"
-  depends_on "scipy"
 
   uses_from_macos "libxml2"
   uses_from_macos "libxslt"
@@ -23,8 +21,12 @@ class Oara < Formula
   # stanza exists for. `depends_on` must precede it — brew audit enforces the
   # order and the cookbook's example does not show the pair together.
   pypi_packages package_name:     "oara-prometheus",
-                exclude_packages: %w[cryptography onnxruntime pydantic pymupdf
-                                     scipy]
+                exclude_packages: %w[cryptography pydantic pymupdf]
+
+  resource "annotated-doc" do
+    url "https://files.pythonhosted.org/packages/5a/8e/38aa427ed5402449e226975b649c5dc73ccadfefeb95e6aecb8f8ea4b6b6/annotated_doc-0.0.5.tar.gz"
+    sha256 "c7e58ce09192557605d8bbd92836d7e1d520ac9580096042c0bfd197efacf1bb"
+  end
 
   resource "anyio" do
     url "https://files.pythonhosted.org/packages/a9/d2/f4d173e22df740bc37b1db102b386ba719b66e95b0f0d751f556b387e6d2/anyio-4.15.1.tar.gz"
@@ -36,6 +38,11 @@ class Oara < Formula
     sha256 "741e2c3b351ddf169a738da9f2c048608ff7f2c5cc02f1ebc6b118bb090d5d55"
   end
 
+  resource "click" do
+    url "https://files.pythonhosted.org/packages/c7/0e/7fa0ef50764b67090eca4114772a2abf8b6148198475e54c660b97caeee6/click-8.5.0.tar.gz"
+    sha256 "ba0d2089de75ea0310e2dde03160e6ca10009947fb95a182f9b54021bb272e34"
+  end
+
   resource "croniter" do
     url "https://files.pythonhosted.org/packages/37/57/2e2a65aee2a70483cb28e2b7e15a072d00a523207593b44400d4717bb100/croniter-6.2.4.tar.gz"
     sha256 "fc124f751b1b04805c2a04b061898b436b45ab2320b045e1e052ea895de65189"
@@ -44,6 +51,11 @@ class Oara < Formula
   resource "et-xmlfile" do
     url "https://files.pythonhosted.org/packages/d3/38/af70d7ab1ae9d4da450eeec1fa3918940a5fafb9055e934af8d6eb0c2313/et_xmlfile-2.0.0.tar.gz"
     sha256 "dab3f4764309081ce75662649be815c4c9081e88f0837825f90fd28317d4da54"
+  end
+
+  resource "fastapi" do
+    url "https://files.pythonhosted.org/packages/8a/02/91e3416a8fdd715abb903a952a6bec7cdd8d14eed55d415fc8595524c319/fastapi-0.141.1.tar.gz"
+    sha256 "e8822fc40db1e1858054d7a949a888695bc9bdce70139178e33bd2871a453ca1"
   end
 
   resource "h11" do
@@ -86,16 +98,6 @@ class Oara < Formula
     sha256 "cf0e3cf56142039133628b5acffe8ef0c12bc902d2aadd3e0fe5878dc08d1050"
   end
 
-  resource "pathvalidate" do
-    url "https://files.pythonhosted.org/packages/fa/2a/52a8da6fe965dea6192eb716b357558e103aea0a1e9a8352ad575a8406ca/pathvalidate-3.3.1.tar.gz"
-    sha256 "b18c07212bfead624345bb8e1d6141cdcf15a39736994ea0b94035ad2b1ba177"
-  end
-
-  resource "piper-tts" do
-    url "https://files.pythonhosted.org/packages/02/cc/95b18b58d9c235d8e0bcece7321b7a7347873c14f9fea2c734b31ef04ff2/piper_tts-1.8.0.tar.gz"
-    sha256 "830588aded347df579c91a32703e0fc2a3685d84f1e3533b14f2de69135d4904"
-  end
-
   resource "pygments" do
     url "https://files.pythonhosted.org/packages/49/2e/ced460408999b33da6b31b0021b0f37d329e202d4169aeb164493778f25b/pygments-2.21.0.tar.gz"
     sha256 "610ca751c9bc2492b38eb9a38a7fbc93edbbb2d7182edaf34e66ae493dee5c8c"
@@ -109,6 +111,11 @@ class Oara < Formula
   resource "python-docx" do
     url "https://files.pythonhosted.org/packages/a9/f7/eddfe33871520adab45aaa1a71f0402a2252050c14c7e3009446c8f4701c/python_docx-1.2.0.tar.gz"
     sha256 "7bc9d7b7d8a69c9c02ca09216118c86552704edc23bac179283f2e38f86220ce"
+  end
+
+  resource "python-multipart" do
+    url "https://files.pythonhosted.org/packages/5b/42/55c32bb9b12693c092ad250a0e82edb5b31ddeda6eb772de5f308b3804ad/python_multipart-0.0.32.tar.gz"
+    sha256 "be54b7f3fa167bb83e4fcd936b887b708f4e57fe75911c02aebf53efaf8d938e"
   end
 
   resource "python-telegram-bot" do
@@ -131,14 +138,24 @@ class Oara < Formula
     sha256 "ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81"
   end
 
-  resource "sounddevice" do
-    url "https://files.pythonhosted.org/packages/ec/db/0c890e2d9aab9ba284021efc02e1d3aebfecab1b611762d7434602209bcf/sounddevice-0.5.6.tar.gz"
-    sha256 "8ec9fbfde2e32f020b167e348f3ab3bac6625a5f15af524d790108ac7147a410"
+  resource "starlette" do
+    url "https://files.pythonhosted.org/packages/7b/2b/3850dc6bf7ef71b088962eba31dafc6cffd2f96e577ebb0bb316df96da3e/starlette-1.7.0.tar.gz"
+    sha256 "c79f74ea63cff761804fbbfb182f1e0b440c2d07b164d24700c5a1bab5d6ff5d"
+  end
+
+  resource "uvicorn" do
+    url "https://files.pythonhosted.org/packages/5d/ad/04bbb797c84fc1f26cb171f7394716f4865ffb8d8c5e1eef42565c2dfa6b/uvicorn-0.53.0.tar.gz"
+    sha256 "a9356f0cb89b3b8621529c5d5eebd69bfe154f4c3f68b4cf2de47e45fa855c2e"
   end
 
   resource "watchdog" do
     url "https://files.pythonhosted.org/packages/db/7d/7f3d619e951c88ed75c6037b246ddcf2d322812ee8ea189be89511721d54/watchdog-6.0.0.tar.gz"
     sha256 "9ddf7c82fda3ae8e24decda1338ede66e1c99883db93711d8fb941eaa2d8c282"
+  end
+
+  resource "websockets" do
+    url "https://files.pythonhosted.org/packages/18/72/fba934cb3dff7a85d811820efffcd141ddd52b5a2a01637f64551373ff4d/websockets-17.1.tar.gz"
+    sha256 "acfea4c20bf54384883ea33b1240fc1db4f52e190823a4e2b334bc3e8bfca96a"
   end
 
   def install
@@ -147,5 +164,29 @@ class Oara < Formula
 
   test do
     assert_match version.to_s, shell_output("#{bin}/oara --version")
+
+    # The web API is part of the base install since 0.9.2 — the server Beacon
+    # pairs with has to import from this virtualenv.
+    system libexec/"bin/python", "-c", "import prometheus.web.server, fastapi, uvicorn, websockets"
+
+    # With no config, `oara daemon` boots into setup mode: it prints the
+    # pairing banner and serves the pairing API. HOME is the empty test dir.
+    port = free_port
+    log = testpath/"daemon.log"
+    pid = spawn({ "HOME" => testpath.to_s, "PROMETHEUS_WEB_API_PORT" => port.to_s },
+                bin/"oara", "daemon", [:out, :err] => log.to_s)
+    begin
+      status = ""
+      60.times do
+        sleep 1
+        status = shell_output("curl -s http://127.0.0.1:#{port}/api/setup/status || true")
+        break if status.include?("setup_mode")
+      end
+      assert_match '"setup_mode":true', status
+      assert_match "PROMETHEUS IS IN SETUP MODE", log.read
+    ensure
+      Process.kill("TERM", pid)
+      Process.wait(pid)
+    end
   end
 end
