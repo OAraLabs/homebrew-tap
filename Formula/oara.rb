@@ -1,10 +1,10 @@
 class Oara < Formula
   include Language::Python::Virtualenv
 
-  desc "Sovereign agent harness for local LLMs"
+  desc "AI agent daemon that runs on hardware you own"
   homepage "https://github.com/OAraLabs/Prometheus"
-  url "https://files.pythonhosted.org/packages/df/87/35553a235c71480b4713d70d03461e28eab9019cae67ca2a7fbe55aca1a7/oara_prometheus-0.9.3.tar.gz"
-  sha256 "b1e916958fbb74be7e361237167d6f1119ab27c0d22a089fa8531a565e6c1519"
+  url "https://files.pythonhosted.org/packages/39/e4/a99cc994172af1b47a664db7014571d3a2c3eea634a1a762c9e486567440/oara_prometheus-0.9.4.tar.gz"
+  sha256 "afbb87d76aad05bb94c5867321d0043e3015f815ef880d657281d1e2a0af9d90"
   license "MIT"
 
   depends_on "cryptography"
