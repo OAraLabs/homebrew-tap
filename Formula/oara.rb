@@ -3,8 +3,8 @@ class Oara < Formula
 
   desc "AI agent daemon that runs on hardware you own"
   homepage "https://github.com/OAraLabs/Prometheus"
-  url "https://files.pythonhosted.org/packages/39/e4/a99cc994172af1b47a664db7014571d3a2c3eea634a1a762c9e486567440/oara_prometheus-0.9.4.tar.gz"
-  sha256 "afbb87d76aad05bb94c5867321d0043e3015f815ef880d657281d1e2a0af9d90"
+  url "https://files.pythonhosted.org/packages/e0/99/eef2c5856a1758fcaa28913a59466e30bf7f32ec0824f07a4d996a8ab7a8/oara_prometheus-0.9.5.tar.gz"
+  sha256 "8aa9a98b8ef9ed0c3796537fbdc6473fc787d06cad303145859d7118d625bee4"
   license "MIT"
 
   depends_on "cryptography"
@@ -144,8 +144,8 @@ class Oara < Formula
   end
 
   resource "uvicorn" do
-    url "https://files.pythonhosted.org/packages/5d/ad/04bbb797c84fc1f26cb171f7394716f4865ffb8d8c5e1eef42565c2dfa6b/uvicorn-0.53.0.tar.gz"
-    sha256 "a9356f0cb89b3b8621529c5d5eebd69bfe154f4c3f68b4cf2de47e45fa855c2e"
+    url "https://files.pythonhosted.org/packages/da/34/30e9280707135d2cfc589dfff3cb796bd07a3aeb1a3e415ba09dd89d7bb4/uvicorn-0.54.0.tar.gz"
+    sha256 "a2e33cbfaa0306f8e6b0c13e0cb89d7d7a2da3e62b90c66e18c33d9807b28620"
   end
 
   resource "watchdog" do
