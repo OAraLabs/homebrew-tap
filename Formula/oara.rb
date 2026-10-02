@@ -3,8 +3,8 @@ class Oara < Formula
 
   desc "AI agent daemon that runs on hardware you own"
   homepage "https://github.com/OAraLabs/Prometheus"
-  url "https://files.pythonhosted.org/packages/e0/99/eef2c5856a1758fcaa28913a59466e30bf7f32ec0824f07a4d996a8ab7a8/oara_prometheus-0.9.5.tar.gz"
-  sha256 "8aa9a98b8ef9ed0c3796537fbdc6473fc787d06cad303145859d7118d625bee4"
+  url "https://files.pythonhosted.org/packages/0b/de/f5c4dc40234c197b95d5bb3b23dc45c5cc993a8d3d00ebb7ed8e95b3c3a4/oara_prometheus-0.9.6.tar.gz"
+  sha256 "dfb5f4d22f3397180b6188bf0a6d22bc9795ddced1f83ea58dcf954e787ed64f"
   license "MIT"
 
   depends_on "cryptography"
@@ -54,8 +54,8 @@ class Oara < Formula
   end
 
   resource "fastapi" do
-    url "https://files.pythonhosted.org/packages/8a/02/91e3416a8fdd715abb903a952a6bec7cdd8d14eed55d415fc8595524c319/fastapi-0.141.1.tar.gz"
-    sha256 "e8822fc40db1e1858054d7a949a888695bc9bdce70139178e33bd2871a453ca1"
+    url "https://files.pythonhosted.org/packages/56/4f/f7c30a73127e0a8bbffe788369b8359e530b01ae06e2757936fa35bc5e6d/fastapi-0.142.2.tar.gz"
+    sha256 "06366626f2e70576367714d9ab2fe8472e6c8456dba69b399f9f797ab5e92570"
   end
 
   resource "h11" do
@@ -96,6 +96,11 @@ class Oara < Formula
   resource "openpyxl" do
     url "https://files.pythonhosted.org/packages/3d/f9/88d94a75de065ea32619465d2f77b29a0469500e99012523b91cc4141cd1/openpyxl-3.1.5.tar.gz"
     sha256 "cf0e3cf56142039133628b5acffe8ef0c12bc902d2aadd3e0fe5878dc08d1050"
+  end
+
+  resource "opentelemetry-api" do
+    url "https://files.pythonhosted.org/packages/1f/dc/e12c1fe1ed8a7b7149777127b1a0e12ce5bd5a81d97408bedc2128c260f5/opentelemetry_api-1.45.0.tar.gz"
+    sha256 "711ede81773c8025c2c03dac0450bc89f3d30aea6eabcc815c570d4e35a963f7"
   end
 
   resource "pygments" do
