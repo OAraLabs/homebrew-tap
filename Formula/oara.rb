@@ -3,14 +3,14 @@ class Oara < Formula
 
   desc "AI agent daemon that runs on hardware you own"
   homepage "https://github.com/OAraLabs/Prometheus"
-  url "https://files.pythonhosted.org/packages/e0/85/8d14c11f325172da763eedd401d968e55653b369b09e0fcad9f0a87ed73c/oara_prometheus-0.9.8.tar.gz"
-  sha256 "d4b41f178d36cdea50410e0eab6133112d67fe53820c2eaa8065323c8dbc95f5"
+  url "https://files.pythonhosted.org/packages/e5/2d/0e06f83e5a0a4dcc3c879698e36d12681e890b61ec6f05c15c82810a147a/oara_prometheus-0.9.13.tar.gz"
+  sha256 "10797a4bdb52a01ffae776802acce9ff4836164f5f488755c7e5c11972c3573d"
   license "MIT"
 
   depends_on "cryptography"
   depends_on "libyaml"
+  depends_on "pillow"
   depends_on "pydantic"
-  depends_on "pymupdf"
   depends_on "python@3.14"
 
   uses_from_macos "libxml2"
@@ -21,7 +21,7 @@ class Oara < Formula
   # stanza exists for. `depends_on` must precede it — brew audit enforces the
   # order and the cookbook's example does not show the pair together.
   pypi_packages package_name:     "oara-prometheus",
-                exclude_packages: %w[cryptography pydantic pymupdf]
+                exclude_packages: %w[cryptography pillow pydantic]
 
   resource "annotated-doc" do
     url "https://files.pythonhosted.org/packages/5a/8e/38aa427ed5402449e226975b649c5dc73ccadfefeb95e6aecb8f8ea4b6b6/annotated_doc-0.0.5.tar.gz"
@@ -48,14 +48,19 @@ class Oara < Formula
     sha256 "fc124f751b1b04805c2a04b061898b436b45ab2320b045e1e052ea895de65189"
   end
 
+  resource "distro" do
+    url "https://files.pythonhosted.org/packages/fc/f8/98eea607f65de6527f8a2e8885fc8015d3e6f5775df186e443e0964a11c3/distro-1.9.0.tar.gz"
+    sha256 "2fa77c6fd8940f116ee1d6b94a2f90b13b5ea8d019b98bc8bafdcabcdd9bdbed"
+  end
+
   resource "et-xmlfile" do
     url "https://files.pythonhosted.org/packages/d3/38/af70d7ab1ae9d4da450eeec1fa3918940a5fafb9055e934af8d6eb0c2313/et_xmlfile-2.0.0.tar.gz"
     sha256 "dab3f4764309081ce75662649be815c4c9081e88f0837825f90fd28317d4da54"
   end
 
   resource "fastapi" do
-    url "https://files.pythonhosted.org/packages/56/4f/f7c30a73127e0a8bbffe788369b8359e530b01ae06e2757936fa35bc5e6d/fastapi-0.142.2.tar.gz"
-    sha256 "06366626f2e70576367714d9ab2fe8472e6c8456dba69b399f9f797ab5e92570"
+    url "https://files.pythonhosted.org/packages/38/d5/b0aeb0b303650ac87b0411de4aaf3f901b06042dcc3fb00f30b97b7ff585/fastapi-0.143.3.tar.gz"
+    sha256 "b9ab567ee57afb4454004ce04c889f8f0160ac47946b99795887cd6e88484848"
   end
 
   resource "h11" do
@@ -99,13 +104,18 @@ class Oara < Formula
   end
 
   resource "opentelemetry-api" do
-    url "https://files.pythonhosted.org/packages/1f/dc/e12c1fe1ed8a7b7149777127b1a0e12ce5bd5a81d97408bedc2128c260f5/opentelemetry_api-1.45.0.tar.gz"
-    sha256 "711ede81773c8025c2c03dac0450bc89f3d30aea6eabcc815c570d4e35a963f7"
+    url "https://files.pythonhosted.org/packages/2e/02/6e0ae9cc61bd3169d401077b507b3ebc344745171e1051ab430be012dcd9/opentelemetry_api-1.45.1.tar.gz"
+    sha256 "aa38ed19bcc084ba42782a73255b3582283eced7ad6dddbd6695189e69adfb75"
   end
 
   resource "pygments" do
     url "https://files.pythonhosted.org/packages/49/2e/ced460408999b33da6b31b0021b0f37d329e202d4169aeb164493778f25b/pygments-2.21.0.tar.gz"
     sha256 "610ca751c9bc2492b38eb9a38a7fbc93edbbb2d7182edaf34e66ae493dee5c8c"
+  end
+
+  resource "pypdfium2" do
+    url "https://files.pythonhosted.org/packages/95/d0/c81d3a7c2a9af37b817ace1de0acd40cf44d15f12407c5e86b3668364a5c/pypdfium2-5.14.0.tar.gz"
+    sha256 "c5f009b3157f10e97dceb55963f5910eff92feb00587ba10a76f12b87ce1a4b6"
   end
 
   resource "python-dateutil" do
@@ -144,8 +154,8 @@ class Oara < Formula
   end
 
   resource "starlette" do
-    url "https://files.pythonhosted.org/packages/7b/2b/3850dc6bf7ef71b088962eba31dafc6cffd2f96e577ebb0bb316df96da3e/starlette-1.7.0.tar.gz"
-    sha256 "c79f74ea63cff761804fbbfb182f1e0b440c2d07b164d24700c5a1bab5d6ff5d"
+    url "https://files.pythonhosted.org/packages/e9/0c/6efb252d091ecccd7d62048ae11f0ea35cd75a4fbaeea5e30f9c3bf91d10/starlette-1.8.0.tar.gz"
+    sha256 "1565dc0b35d5737a271ed1e0e04e949f4e81198799f216d2667b0a0fb9cf9522"
   end
 
   resource "uvicorn" do
@@ -159,8 +169,8 @@ class Oara < Formula
   end
 
   resource "websockets" do
-    url "https://files.pythonhosted.org/packages/18/72/fba934cb3dff7a85d811820efffcd141ddd52b5a2a01637f64551373ff4d/websockets-17.1.tar.gz"
-    sha256 "acfea4c20bf54384883ea33b1240fc1db4f52e190823a4e2b334bc3e8bfca96a"
+    url "https://files.pythonhosted.org/packages/01/89/3f825ab71c242fffb62ea8fe638741c290f62f8d7aadf8125ff897747af3/websockets-17.2.tar.gz"
+    sha256 "36c2fb94c990cc2545143b12690e2de6c16300f9dbe5b4f33fa300cf57dc8792"
   end
 
   def install
