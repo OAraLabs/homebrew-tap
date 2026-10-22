@@ -3,8 +3,8 @@ class Oara < Formula
 
   desc "AI agent daemon that runs on hardware you own"
   homepage "https://github.com/OAraLabs/Prometheus"
-  url "https://files.pythonhosted.org/packages/1b/30/f89dd73bc80a72257ab022488e49df1ddbd89b30bf0d8f0ab427085bc65c/oara_prometheus-0.9.15.tar.gz"
-  sha256 "a920ac03bf7186d2978843e789ffe0ec5e1906b2826c0c521f075b9ba43e2923"
+  url "https://files.pythonhosted.org/packages/61/1d/b0f20dd7155891f7a082b9a442b3929dcbf60c451bbbcd593f1f8861b317/oara_prometheus-0.9.16.tar.gz"
+  sha256 "e5a4357d4b8bfbff28e2b67d6720fd99114c8e4a4d71322d0d45a8af4428be3a"
   license "MIT"
 
   depends_on "cryptography"
@@ -34,8 +34,8 @@ class Oara < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/7e/eb/a2aa1ac3ea30dd3f30ca57f40232138b6b0040719316ecb85daf61167771/certifi-2026.10.18.tar.gz"
-    sha256 "b9995d97b64d0431a5af837d8ca8cd6238104d1f319f04bd93ea43124d6c861e"
+    url "https://files.pythonhosted.org/packages/a6/bd/1436c50cc46699de0230fbaacc1d1de7bfec413176099949e9d5112e88f2/certifi-2026.10.19.tar.gz"
+    sha256 "035c1e85572b141bf1c3a3eff0e33a8eb74917522f2559075ff8d2fea780a1ae"
   end
 
   resource "click" do
@@ -59,8 +59,8 @@ class Oara < Formula
   end
 
   resource "fastapi" do
-    url "https://files.pythonhosted.org/packages/cd/5b/f3b4277844c3ce66c16f62670cd2a26236489aa97115d04182171ce714a9/fastapi-0.146.0.tar.gz"
-    sha256 "e96047fc353ff43f7fda069c3578a7d94902a762d9aca2e065f7f801abd91a49"
+    url "https://files.pythonhosted.org/packages/9a/40/a212bffb9809afb9a94b250f11e0c29fd8b2589ec92e4bedd1cc7adf9938/fastapi-0.159.1.tar.gz"
+    sha256 "b45b1ec57f3aa4d2f80f09bfbcf068b46764a2ee892e56753f35bb3d9d845ce2"
   end
 
   resource "h11" do
@@ -119,8 +119,8 @@ class Oara < Formula
   end
 
   resource "python-dateutil" do
-    url "https://files.pythonhosted.org/packages/66/c0/0c8b6ad9f17a802ee498c46e004a0eb49bc148f2fd230864601a86dcf6db/python-dateutil-2.9.0.post0.tar.gz"
-    sha256 "37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3"
+    url "https://files.pythonhosted.org/packages/0e/df/f15f80383f152452d8985b36d95cb8751f901a3e0ff4cd27f7e118f168e2/python_dateutil-3.0.0.tar.gz"
+    sha256 "7ebcb3c29a92f3ceafe79a7a48a5c45677e9e004bbeec5742ac0bbb00560b7a2"
   end
 
   resource "python-docx" do
@@ -158,6 +158,11 @@ class Oara < Formula
     sha256 "3d931de246ed870e35ce605974440816ef895e592f255d1396cfdf191d4c4318"
   end
 
+  resource "tzdata" do
+    url "https://files.pythonhosted.org/packages/d9/68/f1b440335057bfce71b6e50a9d09445aa2ecbd08359a337976627b8409e7/tzdata-2026.5.tar.gz"
+    sha256 "8cc73c0a0bfca7dbfa59235d60b2eff82231dee33f53d206db1acd9173cfc0a7"
+  end
+
   resource "uvicorn" do
     url "https://files.pythonhosted.org/packages/da/34/30e9280707135d2cfc589dfff3cb796bd07a3aeb1a3e415ba09dd89d7bb4/uvicorn-0.54.0.tar.gz"
     sha256 "a2e33cbfaa0306f8e6b0c13e0cb89d7d7a2da3e62b90c66e18c33d9807b28620"
@@ -169,8 +174,8 @@ class Oara < Formula
   end
 
   resource "websockets" do
-    url "https://files.pythonhosted.org/packages/01/89/3f825ab71c242fffb62ea8fe638741c290f62f8d7aadf8125ff897747af3/websockets-17.2.tar.gz"
-    sha256 "36c2fb94c990cc2545143b12690e2de6c16300f9dbe5b4f33fa300cf57dc8792"
+    url "https://files.pythonhosted.org/packages/30/4b/4692be6d5bf739ed049b3813901c42091f8c054df89d5c089343823dea0d/websockets-17.3.tar.gz"
+    sha256 "1c7dd93a1c9f89297471493674b1fc1d9467cafd45374f2172213046bdb3a329"
   end
 
   def install
