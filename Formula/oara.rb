@@ -3,8 +3,8 @@ class Oara < Formula
 
   desc "AI agent daemon that runs on hardware you own"
   homepage "https://github.com/OAraLabs/Prometheus"
-  url "https://files.pythonhosted.org/packages/5d/9d/f81485b3616f9e3eabfe6f01bb3dc4de26edbf5b2e6b25feabe49da067cc/oara_prometheus-0.9.20.tar.gz"
-  sha256 "706441ba1431b21df43f2ee5403b5012726497d4bd962db0e2e9c166bd5be0dc"
+  url "https://files.pythonhosted.org/packages/52/92/389c4d632d26c483cf3c9e1f3aebb457f189d424c11bd54b9997e2549cb0/oara_prometheus-0.9.21.tar.gz"
+  sha256 "40db945caaa46d88e622fbb6e4f55e3ab2c4769fc1a0f2358e659a38c20fdb98"
   license "MIT"
 
   depends_on "cryptography"
@@ -24,8 +24,8 @@ class Oara < Formula
                 exclude_packages: %w[cryptography pillow pydantic]
 
   resource "annotated-doc" do
-    url "https://files.pythonhosted.org/packages/5a/8e/38aa427ed5402449e226975b649c5dc73ccadfefeb95e6aecb8f8ea4b6b6/annotated_doc-0.0.5.tar.gz"
-    sha256 "c7e58ce09192557605d8bbd92836d7e1d520ac9580096042c0bfd197efacf1bb"
+    url "https://files.pythonhosted.org/packages/0b/7d/bdbf3062e5dae31da8b3de1e3269110beb93d268df4a7f6d22b167c6cee0/annotated_doc-0.0.7.tar.gz"
+    sha256 "0a30ef8f5322a4173720ae6712dc9a5e58f5a19868f3f167b4b5778db066c2b5"
   end
 
   resource "anyio" do
@@ -34,18 +34,18 @@ class Oara < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/fd/11/b524cbd9bbdaca58608e4cf4053fd463417549e1959fa8d3aa18319f9555/certifi-2026.10.23.tar.gz"
-    sha256 "a9895e6e2758b371e0545e321a3a8fd1fcfd9829ada8824a936dfb16aaaf36cd"
+    url "https://files.pythonhosted.org/packages/51/33/4cd27639502f010084bcef7a2036391dd637439901341ce1a530f36f6e51/certifi-2026.11.20.tar.gz"
+    sha256 "af1cb240a8133f105aa52684a3a3258339d7f2fd0bd4e2812698ff5cf5588c4e"
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/c7/0e/7fa0ef50764b67090eca4114772a2abf8b6148198475e54c660b97caeee6/click-8.5.0.tar.gz"
-    sha256 "ba0d2089de75ea0310e2dde03160e6ca10009947fb95a182f9b54021bb272e34"
+    url "https://files.pythonhosted.org/packages/45/37/edbf1b0707709013c0cf2e8317e03d97ed29bf4cac709fe328904ae92a38/click-8.5.1.tar.gz"
+    sha256 "9bbfada76703fd1d784b83eea012e3e8c6a001a876543ef104fa56aaaeb072b4"
   end
 
   resource "croniter" do
-    url "https://files.pythonhosted.org/packages/37/57/2e2a65aee2a70483cb28e2b7e15a072d00a523207593b44400d4717bb100/croniter-6.2.4.tar.gz"
-    sha256 "fc124f751b1b04805c2a04b061898b436b45ab2320b045e1e052ea895de65189"
+    url "https://files.pythonhosted.org/packages/54/17/3c60d4cf8c8768f8a116328f94ddb2f205e64d5afbb1bcb85f315bfbbf42/croniter-7.0.0.tar.gz"
+    sha256 "a0b2568303c774f6a4ea2d4ce2e72b1ee911029c7070d64a1befe05cdb107f5a"
   end
 
   resource "distro" do
@@ -59,8 +59,8 @@ class Oara < Formula
   end
 
   resource "fastapi" do
-    url "https://files.pythonhosted.org/packages/e9/eb/2cf8c80abf09b2800aef0a83b41066fbfda8ee5495b7a08b9d1af40f7046/fastapi-0.162.0.tar.gz"
-    sha256 "6a22c1e2e6e32e0633ee7e170f00009a29b8228b16feb219ee42f32fd8d88a8f"
+    url "https://files.pythonhosted.org/packages/27/f9/e7820ef181026fea100bde02d811445bf8e883362d7092b6928767147056/fastapi-0.165.0.tar.gz"
+    sha256 "dd94d4128319c1e1d50535ab023ab698f850a4d2822f0e181747b46f4ff3c0ab"
   end
 
   resource "h11" do
@@ -89,8 +89,8 @@ class Oara < Formula
   end
 
   resource "markdown-it-py" do
-    url "https://files.pythonhosted.org/packages/06/ff/7841249c247aa650a76b9ee4bbaeae59370dc8bfd2f6c01f3630c35eb134/markdown_it_py-4.2.0.tar.gz"
-    sha256 "04a21681d6fbb623de53f6f364d352309d4094dd4194040a10fd51833e418d49"
+    url "https://files.pythonhosted.org/packages/16/fc/cee2c45553c9a9bf77d8b0c391560c556d7ed756b1f0bb35eb5d48db09ea/markdown_it_py-4.3.0.tar.gz"
+    sha256 "91a58fa5b72c71a40cf7177250fd767480d7a2bb3ac426ccfb76fb90305fdaaa"
   end
 
   resource "mdurl" do
@@ -114,8 +114,8 @@ class Oara < Formula
   end
 
   resource "pypdfium2" do
-    url "https://files.pythonhosted.org/packages/95/d0/c81d3a7c2a9af37b817ace1de0acd40cf44d15f12407c5e86b3668364a5c/pypdfium2-5.14.0.tar.gz"
-    sha256 "c5f009b3157f10e97dceb55963f5910eff92feb00587ba10a76f12b87ce1a4b6"
+    url "https://files.pythonhosted.org/packages/fb/47/8555ff96dd676dd7b2029b8c98a8afd255f5f9eef4a2f4a0445566a323bb/pypdfium2-5.15.2.tar.gz"
+    sha256 "0185193bbdf0cc39f0bf31954c25f12edb81048bcb628ea4fc3dccf8d2ce2aef"
   end
 
   resource "python-dateutil" do
@@ -129,8 +129,8 @@ class Oara < Formula
   end
 
   resource "python-multipart" do
-    url "https://files.pythonhosted.org/packages/9f/b7/15b905f6142a9a8a68f66900788da1a32e4d4254452783b37ad1eccb0506/python_multipart-0.0.33.tar.gz"
-    sha256 "b8112424a6abd162ec08d390565dd113ad699f2fe6fef3c987b8bbcbfe9e390d"
+    url "https://files.pythonhosted.org/packages/7e/c0/c753d487a83d873f6946cee6cbc26cea3fe59a476ad0de99a14938a2fbd8/python_multipart-0.0.34.tar.gz"
+    sha256 "b998ae90ca6e1e363261ce2e0e230281b8af53867b757970abd69ee9edcd843a"
   end
 
   resource "python-telegram-bot" do
@@ -139,8 +139,8 @@ class Oara < Formula
   end
 
   resource "pyyaml" do
-    url "https://files.pythonhosted.org/packages/05/8e/961c0007c59b8dd7729d542c61a4d537767a59645b82a0b521206e1e25c2/pyyaml-6.0.3.tar.gz"
-    sha256 "d76623373421df22fb4cf8817020cbb7ef15c725b9d5e45f17e189bfc384190f"
+    url "https://files.pythonhosted.org/packages/76/b8/c0b780928e2fb1c87e9e375818c6f121da2398b071012d1747be300b83f4/pyyaml-6.0.4.tar.gz"
+    sha256 "e24bf71af8a432d7808fabff134d38dfe16d3cbb41f2873bb4b1e42422de0a1a"
   end
 
   resource "rich" do
@@ -164,8 +164,8 @@ class Oara < Formula
   end
 
   resource "watchdog" do
-    url "https://files.pythonhosted.org/packages/92/68/6477c65315fd5b58ea5c7fbfe871c3ca6e5ec951be6c48c2f5fe8ee5e34d/watchdog-7.0.0.tar.gz"
-    sha256 "128583e0ffa0e5c0531f9f37e2e24be1e7b0503561f6aa8b0aac5a1d646e2bf2"
+    url "https://files.pythonhosted.org/packages/33/d3/38e18c9559b96fca53df98979e72cafcd498aba41b57f0830fc31008ffc2/watchdog-7.1.1.tar.gz"
+    sha256 "d7dc3bf0c3417c002ee976e958479c54d8ca18cbb3532fadbe69511fa389da15"
   end
 
   resource "websockets" do
