@@ -3,8 +3,8 @@ class Oara < Formula
 
   desc "AI agent daemon that runs on hardware you own"
   homepage "https://github.com/OAraLabs/Prometheus"
-  url "https://files.pythonhosted.org/packages/ff/c8/c420879f919ff3e42d2badd477a48d065109f32958b953cef3df6f809360/oara_prometheus-0.9.22.tar.gz"
-  sha256 "7afdffbd1de1df839a9cc89e584aed17dcdc28d51afaa31d89955c322a10f3c0"
+  url "https://files.pythonhosted.org/packages/f6/5a/e4a59251ba81ad72eab06a4633b6c61ff3257c8b1061e2028fe1ca2a4af6/oara_prometheus-0.9.24.tar.gz"
+  sha256 "b907e535e719f03c7cb5706255c2e108c5f4389d1f62dbceac3a4ef7a2163080"
   license "MIT"
 
   depends_on "cryptography"
